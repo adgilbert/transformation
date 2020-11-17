@@ -181,7 +181,7 @@ def define_D(input_nc, ndf, netD, n_layers_D=3, norm='batch', init_type='normal'
         than a full-image discriminator and can work on arbitrarily-sized images
         in a fully convolutional fashion.
 
-        [n_layers]: With this mode, you cna specify the number of conv layers in the discriminator
+        [n_layers]: With this mode, you can specify the number of conv layers in the discriminator
         with the parameter <n_layers_D> (default=3 as used in [basic] (PatchGAN).)
 
         [pixel]: 1x1 PixelGAN discriminator can classify whether a pixel is real or not.
@@ -284,7 +284,7 @@ def cal_gradient_penalty(netD, real_data, fake_data, device, type='mixed', const
         fake_data (tensor array)    -- generated images from the generator
         device (str)                -- GPU / CPU: from torch.device('cuda:{}'.format(self.gpu_ids[0])) if self.gpu_ids else torch.device('cpu')
         type (str)                  -- if we mix real and fake data or not [real | fake | mixed].
-        constant (float)            -- the constant used in formula ( | |gradient||_2 - constant)^2
+        constant (float)            -- the constant used in formula ( ||gradient||_2 - constant)^2
         lambda_gp (float)           -- weight for this loss
 
     Returns the gradient penalty loss
